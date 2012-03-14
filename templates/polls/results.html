@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}| Polls Home{% endblock %}
+
+{% block preload_js %}{% endblock%}
+
+{% block nav %}{% endblock %}
+
+{% block content %}
+	<div id="page-content" class="static-page">
+		{%block header %}
+			<h1>Poll Tut</h1>
+		{% endblock%}
+		
+		<p>
+			{% if poll %}
+				<h1>{{poll}}</h1>
+				<ul>
+					{%for c in poll.choice_set.all %}
+							<li>Choice: {{c.choice}} -- {{c.votes}} vote{{c.votes|pluralize}}</li>
+					{%endfor%}
+				</ul>
+				<a href="/polls/{{poll.id}}/">Vote again?</a>
+
+			{%else%}
+				<p>No poll to show results!!</p>
+			{%endif%}
+		</p>
+	</div> <!-- end page-content -->
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

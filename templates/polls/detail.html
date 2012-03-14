@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}| Polls Home{% endblock %}
+
+{% block preload_js %}{% endblock%}
+
+{% block nav %}{% endblock %}
+
+{% block content %}
+	<div id="page-content" class="static-page">
+		{%block header %}
+			<h1>Poll Tut</h1>
+		{% endblock%}
+		
+		<p>
+			{% if poll %}
+				<h3>Poll: {{poll}} </h3>
+				
+				{% if error_message %}<p><strong>{{error_message}}</strong></p>{% endif %}
+				
+				<form action="/polls/{{poll.id}}/vote/" method="post">
+					{% csrf_token %}
+					{% for choice in poll.choice_set.all %}
+						<input type="radio" name="choice" id="choice{{forloop.counter}}" value="{{choice.id}}" />
+						<label for="choice{{forloop.counter}}">{{choice.choice}}</label>
+						<br />
+					{% endfor %}
+					<input type="submit" value="Vote" />		
+				</form>
+				
+			    <ul>	    
+				    <li>Question: {{ poll.question }}</li>
+				    <li>id: {{poll.id}}</li>
+			    </ul>
+			    <h3>Comments</h3>
+			    <ul>
+				    {% for choice in poll.choice_set.all %}
+				    	<li>{{choice.choice}}</li>
+				    {% endfor %}
+			    </ul>
+			    
+			{% else %}
+			    <p>No poll id.</p>
+			{% endif %}
+		</p>
+	</div> <!-- end page-content -->
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

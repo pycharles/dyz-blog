@@ -1,9 +1,21 @@
-{% if latest_poll_list %}
-    <ul>
-    {% for poll in latest_poll_list %}
-        <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+{% extends 'base.html' %}
+{% block title %}| Welcome{% endblock %}
+
+{% block preload_js %}{% endblock%}
+
+{% block nav %}{% endblock %}
+
+{% block content %}
+	<div id="page-content" class="static-page">
+		{%block header %}
+			<h1>Welcome to my site!</h1>
+		{% endblock%}
+		
+		<p>
+			Putting up a blog here.
+		</p>
+	</div> <!-- end page-content -->
+{% endblock %}
+
+
+

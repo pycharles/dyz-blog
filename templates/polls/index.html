@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}| Polls Home{% endblock %}
+
+{% block preload_js %}{% endblock%}
+
+{% block nav %}{% endblock %}
+
+{% block content %}
+	<div id="page-content" class="static-page">
+		{%block header %}
+			<h1>Poll Tut</h1>
+		{% endblock%}
+		
+		<p>
+			{% if latest_poll_list %}
+			    <ul>
+			    {% for poll in latest_poll_list %}
+			        <li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>
+			    {% endfor %}
+			    </ul>
+			{% else %}
+			    <p>No polls are available.</p>
+			{% endif %}
+		</p>
+	</div> <!-- end page-content -->
+{% endblock %}
+
+
+
+
+
+
