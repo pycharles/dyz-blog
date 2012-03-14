@@ -1,4 +1,7 @@
 # Django settings for aruba (blog) project.
+import os
+
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
 DEBUG = False
 #TEMPLATE_DEBUG = DEBUG
@@ -83,6 +86,17 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    'django.core.context_processors.request',
+    "django.core.context_processors.static",
+#    "django.core.context_processors.tz",
+    "django.contrib.messages.context_processors.messages"
+)
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -93,11 +107,12 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'urls'
 
-TEMPLATE_DIRS = (
+#TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-)
+#)
+TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -108,7 +123,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'django.contrib.comments',
     'polls',
+    'tagging',
+    'mptt',
+    'zinnia',
 )
 
 # A sample logging configuration. The only tangible logging

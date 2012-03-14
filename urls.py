@@ -6,6 +6,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^polls/', include('polls.urls')),
+    url(r'^weblog/', include('zinnia.urls')),
+    url(r'^comments/', include('django.contrib.comments.urls')),
     
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
