@@ -125,9 +125,10 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.comments',
-    'polls',
-    'tagging',
+    'gunicorn',
     'mptt',
+    'polls',
+    'tagging',    
     'zinnia',
 )
 
