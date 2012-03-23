@@ -2,19 +2,68 @@ body{
 	color:blue;
 	background-color:yellow;
 	font-size:14px;
+	line-height:1.5em;
 }
 
 #navbar {
+	width:400px;
+	margin: 0 auto;
+	text-align:center;
+}
+#navbar-ul {
 	list-style:none;
 }
-#navbar li{
+#navbar-ul li{
 	padding-right:20px;
 	display: inline;
 }
 
 
 #content{
+	/*
 	background-color:white;
 	margin:20px;
-	padding:5px 20px 20px;
+	padding:5px 20px 20px;*/
+}
+
+.shade {
+	background: url("../images/shade.gif") no-repeat scroll center bottom transparent;
+	height:19px;
+	overflow: hidden;
+}
+
+.zinnia .container{
+	width:960px;
+}
+.zinnia #header {
+	border:none;
+}
+
+.zinnia #header h1 {
+	color:#0066AA;
+	font-size:3em;
+	text-align:center;
+	width:400px;
+	margin: 25px auto 15px;
+}
+
+.zinnia #header h1 a:hover  {
+	color:#0066AA;
+}
+
+.zinnia #header blockquote {
+	text-align:center;
+}
+.zinnia #header blockquote {
+	margin:0;
+}
+
+.zinnia-img{
+	max-width:300px;
+	max-height:300px;
+	float:right;
+}
+
+.entry-footer{
+	clear:both;
 }
