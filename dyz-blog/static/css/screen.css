@@ -126,8 +126,8 @@ summary { display: block }
     line-height: 1.5;
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
-    font-size: 75%;
-    background: transparent url(/static/zinnia/img/background.gif) repeat-x scroll left top;
+    
+    background: transparent url(/zinnia/img/background.gif) repeat-x scroll left top;
 }
 .zinnia h1,
 .zinnia h2,
@@ -296,9 +296,9 @@ summary { display: block }
 }
 .zinnia a { text-decoration: none }
 .zinnia a:hover { text-decoration: underline }
-.zinnia li { list-style-image: url(/static/zinnia/img/bullet.png) }
+.zinnia li { list-style-image: url(../zinnia/img/bullet.png) }
 .zinnia .container {
-    *zoom: 1;
+    zoom: 1;
     margin: auto;
     width: 85em;
     max-width: 100%;
@@ -410,7 +410,7 @@ summary { display: block }
 .zinnia .slider {
     width: 100%;
     position: relative;
-    background: url(/static/zinnia/img/loader.gif) no-repeat center center;
+    background: url(../zinnia/img/loader.gif) no-repeat center center;
 }
 .zinnia .slides:before,
 .zinnia .slides:after {
@@ -487,11 +487,11 @@ summary { display: block }
 .zinnia .flex-direction-nav a:hover { opacity: 1 }
 .zinnia .flex-direction-nav .prev {
     left: 0;
-    background: url("/static/zinnia/img/prev.png") no-repeat center center;
+    background: url("../zinnia/img/prev.png") no-repeat center center;
 }
 .zinnia .flex-direction-nav .next {
     right: 0;
-    background: url("/static/zinnia/img/next.png") no-repeat center center;
+    background: url("../zinnia/img/next.png") no-repeat center center;
 }
 @media (min-width: 900px) { 
     .zinnia .slider-container {
@@ -541,11 +541,11 @@ summary { display: block }
 .zinnia #header .top-navigation li:last-child:after { content: "" }
 .zinnia #header .top-navigation li.last:after { content: "" }
 .zinnia #header .top-navigation .sitemap {
-    background: transparent url("/static/zinnia/img/sitemap.png") no-repeat scroll left center;
+    background: transparent url("../zinnia/img/sitemap.png") no-repeat scroll left center;
     padding-left: 1.5em;
 }
 .zinnia #header .top-navigation .feeds {
-    background: transparent url("/static/zinnia/img/rss.png") no-repeat scroll left center;
+    background: transparent url("../zinnia/img/rss.png") no-repeat scroll left center;
     padding-left: 1.5em;
 }
 .zinnia #footer {
@@ -555,7 +555,7 @@ summary { display: block }
 .zinnia ul.breadcrumbs {
     margin: 0;
     font-size: 1.2em;
-    background: transparent url(/static/zinnia/img/breadcrumb.png) no-repeat scroll left center;
+    background: transparent url(../zinnia/img/breadcrumb.png) no-repeat scroll left center;
 }
 .zinnia ul.breadcrumbs li {
     list-style: none;
@@ -645,7 +645,7 @@ summary { display: block }
 .zinnia p.entry-info {
     color: #666;
     padding-left: 2em;
-    background: transparent url(/static/zinnia/img/category.png) no-repeat scroll 0.5em;
+    background: transparent url(../zinnia/img/category.png) no-repeat scroll 0.5em;
 }
 .zinnia .entry-body {
     text-align: justify;
@@ -683,15 +683,15 @@ summary { display: block }
 .zinnia .entry-footer p { margin: 0 }
 .zinnia .entry-tags strong {
     padding-left: 1.5em;
-    background: transparent url("/static/zinnia/img/tags.png") no-repeat scroll;
+    background: transparent url("../zinnia/img/tags.png") no-repeat scroll;
 }
 .zinnia .entry-shorturl strong {
     padding-left: 1.5em;
-    background: transparent url("/static/zinnia/img/shorturl.png") no-repeat scroll;
+    background: transparent url("../zinnia/img/shorturl.png") no-repeat scroll;
 }
 .zinnia .entry-comments strong {
     padding-left: 1.5em;
-    background: transparent url("/static/zinnia/img/comments.png") no-repeat scroll;
+    background: transparent url("../zinnia/img/comments.png") no-repeat scroll;
 }
 .zinnia .entry-widgets p,
 .zinnia .entry-widgets ul { padding-left: 1.5em }
