@@ -59,7 +59,6 @@ STATIC_ROOT = ''
 #STATIC_URL = '/static/'
 STATIC_URL = 'https://s3.amazonaws.com/blog-static-files/'
 
-
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
