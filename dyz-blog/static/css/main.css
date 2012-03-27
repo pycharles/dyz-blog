@@ -3,6 +3,7 @@ body{
 	background-color:yellow;
 	font-size:14px;
 	line-height:1.5em;
+	font-family: Verdana, Arial,Helvetica,sans-serif;
 }
 
 #navbar {
@@ -33,7 +34,9 @@ body{
 	height:19px;
 	overflow: hidden;
 }
-
+.zinnia {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
 .zinnia .container{
 	width:960px;
 }
@@ -45,8 +48,9 @@ body{
 	color:#0066AA;
 	font-size:3em;
 	text-align:center;
-	width:400px;
+	width:600px;
 	margin: 25px auto 12px;
+	
 }
 
 .zinnia #header h1 a:hover  {
@@ -79,12 +83,11 @@ body{
 
 .zinnia h1{
 	color:#333333;
-
-}
-
-.zinnia h1 {
 	font-size:1.5em;
-
+	font-family: 'Rock Salt',Verdana,Arial,Helvetica,sans-serif;
+}
+.zinnia h2{
+	font-family: 'Rock Salt',Verdana,Arial,Helvetica,sans-serif;
 }
 
 .entry-footer{
