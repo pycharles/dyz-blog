@@ -7,7 +7,7 @@
     <meta name="description" content="{% block meta-description %}Charles O'Brien - Tallahassee, Florida{% endblock %}" />
     <meta name="keywords" content="{% block meta-keywords %}blog, hacker, developer, security, django, {{ entry_tags|join:", "}}{% endblock %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" /> 
-    <meta name="author" content="Charles O&apos;Brien" />
+    <meta name="author" content="Charles O&#39;Brien" />
 
     <meta http-equiv="cache-control" content="public" />
     <meta name="robots" content="follow, all" />
@@ -55,12 +55,18 @@
                     </div> end header-logo -->
 
                     <ul class="top-navigation">
-                      <li><a href="{% url zinnia_sitemap %}" title="{% trans "Sitemap" %}" class="sitemap">{% trans "Sitemap" %}</a></li>
+                      <li><a href="{% url zinnia_sitemap %}" title="{% trans "Sitemap" %}" class="sitemap">{% trans "Sitemap" %}</a></li>|
                       <li><a href="{% url zinnia_entry_latest_feed %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds">{% trans "RSS Feed" %}</a></li>
+                      
+                      
+                        {% if perms.zinnia %}
+                            |&nbsp;<li><a href="{% url admin:app_list "zinnia" %}" title="{% trans "Dashboard" %}" class="dashboard">Dashboard</a></li>
+                        {% endif %}
+                      
                     </ul>
 
-                    <h1><a href="{% url zinnia_entry_archive_index %}" title="Charles O&apos;Brien" rel="home">Charles O&apos;Brien</a></h1>
-                    <blockquote><p>Information technology, security and more.</p></blockquote>                    
+                    <h1><a href="{% url zinnia_entry_archive_index %}" title="Charles O&#39;Brien" rel="home">Charles O&#39;Brien</a></h1>
+                    <blockquote>Information technology, security and more.</blockquote>                    
 
                     {% block header-extra %}{% endblock %}
 
@@ -73,14 +79,14 @@
                     <ul id="navbar-ul">
                         <li><a href="/weblog/">Blog</a></li>
                         <li><a href="/polls/">Poll Tut</a></li>
-                        <li><a href="/">About</a></li>
+                        <li><a href="/about/">About</a></li>
                         <li><a href="/">Contact</a></li>
                     </ul>
                 </div>
             </nav>
             <div class="shade"></div>
 
-            {% block breadcrumbs %}{% endblock %}
+            <div id="breadcrumbs">{% block breadcrumbs %}{% endblock %}</div>
             
             <div id="content"  class="hfeed"> 
                 {% block content %}
@@ -92,14 +98,51 @@
 
             <div id="sidebar">
                 <div class="welcome">
-                  <h3>Welcome!</h3>
+                    <h3>Welcome
+                        {% if request.user.is_authenticated %}
+                            <span>{{request.user.first_name}}</span>
+                      {% endif %}
+                    !</h3>
+
+                    {% if user.is_authenticated %}
+                    <div id="widget-tools" class="widget">
+                      
+                      <ul>
+                        {% if perms.zinnia %}
+                        <li>
+                          <a href="{% url admin:app_list "zinnia" %}" title="{% trans "Dashboard" %}">
+                            {% trans "Dashboard" %}
+                          </a>
+                        </li>
+                        {% endif %}
+                        {% if perms.zinnia.add_entry %}
+                        <li>
+                          <a href="{% url admin:zinnia_entry_add %}" title="{% trans "Post an entry" %}">
+                            {% trans "Post an entry" %}
+                          </a>
+                        </li>
+                        {% endif %}
+                        {% block admin_tools %}
+                        {% endblock %}
+                        <li>
+                          <a href="{% url admin:logout %}" title="{% trans "Log out" %}">
+                            {% trans "Log out" %}
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    {% endif %}
+
+
+
+
+
                   <p>
-                    This simple skin is the base template of the Zinnia application,
-                    used for displaying the blog quickly.
+                    I enjoy solving problems and sharing experiences with other people.
                   </p>
                   <p>
-                    Feel free to override the <strong>zinnia/base.html</strong>
-                    template to <a href="http://django-blog-zinnia.com/documentation/notes/faq/#templates">change the default appearence</a>.
+                    <a href="https://twitter.com/charlesob" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @charlesob</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                   </p>
                 </div>
                 {% block sidebar %}

@@ -9,9 +9,11 @@ body{
 	width:400px;
 	margin: 0 auto;
 	text-align:center;
+	font-size:1.2em;
 }
 #navbar-ul {
 	list-style:none;
+	margin-bottom:5px;
 }
 #navbar-ul li{
 	padding-right:20px;
@@ -44,7 +46,7 @@ body{
 	font-size:3em;
 	text-align:center;
 	width:400px;
-	margin: 25px auto 15px;
+	margin: 25px auto 12px;
 }
 
 .zinnia #header h1 a:hover  {
@@ -57,13 +59,70 @@ body{
 .zinnia #header blockquote {
 	margin:0;
 }
-
+#breadcrumbs {
+	min-height:17px;
+}
 .zinnia-img{
 	max-width:300px;
 	max-height:300px;
 	float:right;
 }
+.zinnia .top-navigation a {
+	padding-right:0.3em;
+}
+.zinnia ul.breadcrumbs {
+	font-size:0.8em;
+	padding-left:2em;
+	margin:0 0 5px 10px;
+	
+}
+
+.zinnia h1{
+	color:#333333;
+
+}
+
+.zinnia h1 {
+	font-size:1.5em;
+
+}
 
 .entry-footer{
 	clear:both;
+}
+
+.zinnia #header .top-navigation .dashboard {
+    background: transparent url("../zinnia/img/manage.png") no-repeat scroll left center;
+    padding-left: 1.5em;
+}
+.tweeter {
+	float:right;
+	margin: 20px 0 0 5px;
+	border-left: 15px solid white;
+	background:white;
+}
+
+.zinnia .entry-header {
+	margin-top:0px;
+
+}
+
+.zinnia #header .top-navigation li:after {
+    content: "";
+}
+.zinnia h2.entry-title {
+	font-size:1.7em;
+	line-height:1.3em;
+	margin-bottom:15px;
+	background: url("../zinnia/img/bullet.png") no-repeat scroll 0 11px transparent;
+	padding:0 0 5px 15px;
+	border-bottom:none;
+	/*border-bottom:1px solid #CCCCCC;*/
+
+	vertical-align:center;
+}
+.zinnia .hentry{
+	border-bottom:1px solid #CCCCCC;
+	margin-bottom: 30px;
+	padding-bottom:15px;
 }
