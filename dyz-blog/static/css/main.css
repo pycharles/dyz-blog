@@ -93,6 +93,9 @@ body{
 .entry-footer{
 	clear:both;
 }
+.zinnia #footer {
+	padding-top: 35px;
+}
 
 .zinnia #header .top-navigation .dashboard {
     background: transparent url("../zinnia/img/manage.png") no-repeat scroll left center;
@@ -128,4 +131,55 @@ body{
 	border-bottom:1px solid #CCCCCC;
 	margin-bottom: 30px;
 	padding-bottom:15px;
+}
+
+input,textarea,select{
+	padding:2px 5px;
+	
+	border-radius: 4px;
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px; 
+	
+	-moz-box-shadow: inset 0px 0px 5px #888;
+	-webkit-box-shadow: inset 0px 0px 5px #888;
+	box-shadow: inset 0px 0px 5px #AAA;
+	
+    border: 1px solid #C3C3C3;
+}
+input[type=submit]{
+	/*background: url('../images/nightlys-button-bg.png') repeat-x scroll 50% 50% #D7EBF9;*/
+	
+    cursor: pointer;
+    border: 1px solid #AED0EA;
+ 	color: #2779AA;
+	font-weight: bold;
+	box-shadow: none;
+	padding:4px 9px;
+	
+	background: url('../css/images/ui-bg_glass_50_3baae3_1x400.png') repeat-x scroll 50% 50% #3BAAE3;
+	border: 1px solid #2694E8;
+	color:white;
+    
+}
+input[type=submit]:hover {
+	/*
+	background: url('../images/nightlys-button-bg-hover.png') repeat-x scroll 50% 50% #E4F1FB;
+	border: 1px solid #74B2E2;
+    color: #0070A3;  
+    */  
+    
+    font-weight: bold;
+    outline: medium none;
+    
+    background: url('../images/nightlys-button-bg.png') repeat-x scroll 50% 50% #D7EBF9;
+    border: 1px solid #AED0EA;
+    color: #2779AA;    
+}
+input[type=submit]:hover.disabled {
+    color: #8897A0;    
+}
+
+.center-element {
+	margin: 0 auto;
+	display:block;
 }

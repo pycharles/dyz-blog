@@ -1,0 +1,6 @@
+Somebody commented on the blog...
+
+sender: {{form.email }}
+
+{{ form.message }}
+

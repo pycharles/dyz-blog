@@ -367,8 +367,8 @@ summary { display: block }
 .zinnia form textarea {
     margin: 0.5em 0;
     padding: 0.5em;
-    width: 70%;
-    height: 300px;
+    width: 90%;
+    
 }
 .zinnia form select { margin: 0.5em 0 }
 .zinnia form input[type=email],

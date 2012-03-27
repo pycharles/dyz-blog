@@ -6,9 +6,45 @@ PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 DEBUG = False
 #TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
+
+
+
+
+
+dummy_from = 'mike@hotmail.com'
+dummy_to = 'mike@hotmail.com'
+
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', dummy_from)
+DEFAULT_TO_EMAIL   = os.environ.get('DEFAULT_TO_EMAIL', dummy_to)
+SUPPORT_EMAIL_RCPT = os.environ.get('DEFAULT_TO_EMAIL', dummy_to)
+ADMIN_EMAIL_RCPT   = os.environ.get('DEFAULT_TO_EMAIL', dummy_to) 
+
+ADMINS = (    
     # ('Your Name', 'your_email@example.com'),
 )
+
+SEND_BROKEN_LINK_EMAILS = True
+
+MANAGERS = (('Admins', DEFAULT_TO_EMAIL), ) 
+
+SERVER_EMAIL = DEFAULT_FROM_EMAIL   # Django (mostly logging)
+
+MAILER = 'send_mail'
+try:
+    if os.environ.has_key('SENDGRID_USERNAME'):
+        EMAIL_HOST = 'smtp.sendgrid.net'
+        EMAIL_HOST_USER = os.environ['SENDGRID_USERNAME']
+        EMAIL_HOST_PASSWORD = os.environ['SENDGRID_PASSWORD']
+        EMAIL_PORT = 587
+        EMAIL_USE_TLS = True
+except:     
+    print "Unexpected sendgrid error:", sys.exc_info()
+
+
+
+
+
+
 
 MANAGERS = ADMINS
 
@@ -36,6 +72,16 @@ USE_I18N = True
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale
 USE_L10N = True
+
+
+
+
+
+
+
+
+
+
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
@@ -126,6 +172,7 @@ ROOT_URLCONF = 'urls'
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
 
 INSTALLED_APPS = (
+    'common',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

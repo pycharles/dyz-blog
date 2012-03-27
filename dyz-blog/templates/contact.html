@@ -1,0 +1,29 @@
+{% extends 'skeleton.html' %}
+{% block title %}| Contact{% endblock %}
+
+{% block preload_js %}{% endblock%}
+
+{% block nav %}{% endblock %}
+
+{% block content %}
+	<div id="page-content" class="static-page">
+		{%block header %}
+			<h1>Contact</h1>
+		{% endblock%}
+		
+		<p>
+			Please do not hesitate to strike up a conversation.  Building relationships is the whole reason why this website exists.
+		</p>
+		<form action ="#" method = "post">
+			<table>
+				{% csrf_token %}
+				{{ form.as_table }}
+			</table>
+
+			<input type="submit" value="Submit"  style = "width:100px; position:relative; left:65%"/>
+		</form>
+	</div> <!-- end page-content -->
+{% endblock %}
+
+
+
