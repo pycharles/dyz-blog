@@ -45,7 +45,7 @@ body{
 }
 
 .zinnia #header h1 {
-	font-family: 'Rock Salt',Verdana,Arial,Helvetica,sans-serif;
+	font-family: 'Rock Salt',cursive,Verdana,Arial,Helvetica,sans-serif;
 	color:#0066AA;
 	font-size:3em;
 	text-align:center;
@@ -83,27 +83,27 @@ body{
 }
 
 .zinnia h2.entry-title {
-	font-family: 'Rock Salt',Verdana,Arial,Helvetica,sans-serif;
+	font-family: 'Rock Salt',cursive,Verdana,Arial,Helvetica,sans-serif;
 	font-size:1.7em;
 	color:#333333;	
 }
 .entry-content h1, .static-page h1{
-	font-family: 'Rock Salt',Verdana,Arial,Helvetica,sans-serif;
+	font-family: 'Rock Salt',cursive,Verdana,Arial,Helvetica,sans-serif;
 	font-size:1.5em;
 	color:#333333;	
 }
 .entry-content h2, .static-page h2 {
-	font-family: 'Rock Salt',Verdana,Arial,Helvetica,sans-serif;
+	font-family: 'Rock Salt',cursive,Verdana,Arial,Helvetica,sans-serif;
 	font-size:1.3em;
 	color:#333333;
 }
 .entry-content h3, .static-page h3{
-	font-family: 'Rock Salt',Verdana,Arial,Helvetica,sans-serif;
+	font-family: 'Rock Salt',cursive,Verdana,Arial,Helvetica,sans-serif;
 	font-size:1em;
 	color:#333333;
 }
 .entry-content h4, .static-page h4{
-	font-family: 'Rock Salt',Verdana,Arial,Helvetica,sans-serif;
+	font-family: 'Rock Salt',cursive,Verdana,Arial,Helvetica,sans-serif;
 	font-size:1em;
 	color:#333333;
 }
