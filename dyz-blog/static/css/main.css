@@ -6,6 +6,9 @@ body{
 	font-family: Verdana, Arial,Helvetica,sans-serif;
 }
 
+
+
+
 #navbar {
 	width:400px;
 	margin: 0 auto;
@@ -54,7 +57,8 @@ body{
 }
 
 .zinnia #header h1 a:hover  {
-	color:#0066AA;
+	color:#11A0FF;
+	text-decoration: none;
 }
 
 .zinnia #header blockquote {
@@ -87,6 +91,8 @@ body{
 	font-size:1.7em;
 	color:#333333;	
 }
+.zinnia h2.entry-title a:hover {text-decoration: none;}
+
 .entry-content h1, .static-page h1{
 	font-family: 'Rock Salt',cursive,Verdana,Arial,Helvetica,sans-serif;
 	font-size:1.5em;
