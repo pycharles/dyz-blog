@@ -215,8 +215,8 @@ LOGGING = {
 }
 
 ZINNIA_WYSIWYG = None
-BITLY_LOGIN = 'your bitly login'
-BITLY_API_KEY = 'your bitly api key'
+BITLY_LOGIN = os.environ.get('BITLY_LOGIN','over-ride locally')
+BITLY_API_KEY = os.environ.get('BITLY_API_KEY','over-ride locally')
 ZINNIA_URL_SHORTENER_BACKEND = 'zinnia.url_shortener.backends.bitly'
 
 
