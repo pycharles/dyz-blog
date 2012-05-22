@@ -182,6 +182,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.comments',
+    'django_bitly',
     'gunicorn',
     'mptt',
     'polls',
@@ -214,6 +215,9 @@ LOGGING = {
 }
 
 ZINNIA_WYSIWYG = None
+BITLY_LOGIN = 'your bitly login'
+BITLY_API_KEY = 'your bitly api key'
+ZINNIA_URL_SHORTENER_BACKEND = 'zinnia.url_shortener.backends.bitly'
 
 
 try:
