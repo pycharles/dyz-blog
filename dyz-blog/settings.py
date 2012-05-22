@@ -3,7 +3,8 @@ import os
 
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
-DEBUG = False
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False')
+# To enable remote debug: heroku config:add DJANGO_DEBUG=TRUE  -- just remember to change it back
 #TEMPLATE_DEBUG = DEBUG
 
 
