@@ -4,7 +4,8 @@ import os
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
 DEBUG = os.environ.get('DJANGO_DEBUG', False)
-# To enable remote debug: heroku config:add DJANGO_DEBUG=TRUE  -- just remember to change it back
+# To enable remote debug: heroku config:add DJANGO_DEBUG=True  
+# Remember to remove with heroku config:remove DJANGO_DEBUG
 #TEMPLATE_DEBUG = DEBUG
 
 
@@ -93,7 +94,7 @@ MEDIA_ROOT = ''
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 #MEDIA_URL = ''
-MEDIA_URL = 'https://s3.amazonaws.com/blog-static-files/' 
+MEDIA_URL = 'https://s3.amazonaws.com/blog-static-files/uploads/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -109,7 +110,7 @@ STATIC_URL = 'https://s3.amazonaws.com/blog-static-files/'
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+ADMIN_MEDIA_PREFIX = '/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
