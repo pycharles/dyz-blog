@@ -1,8 +1,18 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.conf import settings
 
+from zinnia.sitemaps import TagSitemap
+from zinnia.sitemaps import EntrySitemap
+from zinnia.sitemaps import CategorySitemap
+from zinnia.sitemaps import AuthorSitemap
+
 from django.contrib import admin
 admin.autodiscover()
+
+sitemaps = {'tags': TagSitemap,
+            'blog': EntrySitemap,
+            'authors': AuthorSitemap,
+            'categories': CategorySitemap,}
 
 urlpatterns = patterns('',
 	#url(r'^$','django.views.generic.simple.direct_to_template',{'template':'index.html'}, 'index'),
@@ -15,8 +25,11 @@ urlpatterns = patterns('',
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    
+)
 
+urlpatterns += patterns('django.contrib.sitemaps.views',
+    url(r'^sitemap.xml$', 'index', {'sitemaps': sitemaps}),
+    url(r'^sitemap-(?P<section>.+)\.xml$', 'sitemap', {'sitemaps': sitemaps}),
 )
 
 #if settings.DEBUG :
