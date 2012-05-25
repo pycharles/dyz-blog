@@ -1,0 +1,10 @@
+/* TEAM */
+  Developer: Charles O'Brien
+  Site: http://www.charlesobrien.net
+  Twitter: @charlesob
+  GitHub: https://github.com/pycharles
+  Location: Tallahassee, Florida
+
+
+/* THANKS */
+  Zinnia Blog Creators: Julien Fache & contributors
