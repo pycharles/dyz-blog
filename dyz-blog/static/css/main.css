@@ -161,6 +161,10 @@ body{
 	margin-bottom: 30px;
 	padding-bottom:15px;
 }
+.zinnia pre, .zinnia code, .zinnia .entry-body pre {
+	clear:both;
+	font-size:0.9em;
+}
 
 input,textarea,select{
 	padding:2px 5px;
@@ -211,4 +215,26 @@ input[type=submit]:hover.disabled {
 .center-element {
 	margin: 0 auto;
 	display:block;
+}
+.pullquote, .callout {
+    color: #0066AA;
+}
+.pullquote {
+	border-left-style: solid;
+    border-left-width: 5px;
+    clear: right;
+    float: right;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin: 0 1em 1em 2em;
+    padding: 0 0 0 0.5em;
+    width: 37%;
+}
+.callout {
+    border-left-style: solid;
+    border-left-width: 5px;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin: 1em;
+    padding: 0 0 0 0.5em;
 }
