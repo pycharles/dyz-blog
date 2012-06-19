@@ -5,6 +5,13 @@ body{
 	line-height:1.5em;
 	font-family: Verdana, Arial,Helvetica,sans-serif;
 }
+hr {
+	color:#11A0FF;
+	margin: 30px 20px;
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	filter:alpha(opacity=5);
+}
 
 #forkme {
     position: fixed;
@@ -237,4 +244,52 @@ input[type=submit]:hover.disabled {
     line-height: 1.5em;
     margin: 1em;
     padding: 0 0 0 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:12.0pt;
+
+}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:12.0pt;
+	line-height:115%;
+	font-size:12.0pt;
+
+}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:24.0pt;
+	line-height:115%;
+	font-size:12.0pt;
 }
