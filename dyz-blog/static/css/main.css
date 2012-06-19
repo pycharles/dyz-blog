@@ -248,48 +248,34 @@ input[type=submit]:hover.disabled {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-p.MsoToc1, li.MsoToc1, div.MsoToc1
-	{margin-top:0in;
+/* Table of contents */
+p.MsoToc1 {
+	margin-top:0in;
 	margin-right:0in;
 	margin-bottom:5.0pt;
 	margin-left:0in;
 	line-height:115%;
 	font-size:12.0pt;
-
 }
-p.MsoToc2, li.MsoToc2, div.MsoToc2
-	{margin-top:0in;
+p.MsoToc2 {
+	margin-top:0in;
 	margin-right:0in;
 	margin-bottom:5.0pt;
 	margin-left:12.0pt;
 	line-height:115%;
 	font-size:12.0pt;
-
 }
-p.MsoToc3, li.MsoToc3, div.MsoToc3
-	{margin-top:0in;
+p.MsoToc3 { 
+	margin-top:0in;
 	margin-right:0in;
 	margin-bottom:5.0pt;
 	margin-left:24.0pt;
 	line-height:115%;
 	font-size:12.0pt;
+}
+
+
+/* Mobile style over-ride */
+@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)  {
+    #forkme { display:none ; }
 }
