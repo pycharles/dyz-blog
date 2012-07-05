@@ -222,6 +222,9 @@ BITLY_LOGIN = os.environ.get('BITLY_LOGIN','over-ride locally')
 BITLY_API_KEY = os.environ.get('BITLY_API_KEY','over-ride locally')
 ZINNIA_URL_SHORTENER_BACKEND = 'zinnia.url_shortener.backends.bitly'
 
+ZINNIA_SPAM_CHECKER_BACKENDS = ('zinnia.spam_checker.backends.automattic',)
+AKISMET_SECRET_API_KEY = os.environ.get('AKISMET_SECRET_API_KEY','over-ride locally')
+
 
 try:
     from localsettings import *

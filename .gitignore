@@ -42,6 +42,7 @@ Thumbs.db
 .pydevproject
 *.sublime*
 venv
+*.swp
 
 #locals only
 localsettings.py
