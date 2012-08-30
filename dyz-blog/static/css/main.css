@@ -172,6 +172,16 @@ hr {
 	clear:both;
 	font-size:0.9em;
 }
+.quote, .zinnia .quote {
+    border-left: 2px solid #A5ABAB; 
+    /*border-top:none;border-right:none;border-bottom:none;*/
+    color:#666666; 
+    margin:1em 3em; 
+    padding: 0 1em; 
+    font-style: italic; 
+    /*background-color: transparent;*/
+}
+
 
 input,textarea,select{
 	padding:2px 5px;
