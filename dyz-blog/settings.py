@@ -23,7 +23,7 @@ SUPPORT_EMAIL_RCPT = os.environ.get('DEFAULT_TO_EMAIL', dummy_to)
 ADMIN_EMAIL_RCPT   = os.environ.get('DEFAULT_TO_EMAIL', dummy_to) 
 
 ADMINS = (    
-    # ('Your Name', 'your_email@example.com'),
+    os.environ.get('DEFAULT_TO_EMAIL', dummy_to),
 )
 
 SEND_BROKEN_LINK_EMAILS = True
@@ -202,16 +202,30 @@ INSTALLED_APPS = (
 # more details on how to customize your logging configuration.
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': False,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
     'handlers': {
+        'console': {
+            'level': 'ERROR',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
         'mail_admins': {
             'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler'
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
         }
     },
     'loggers': {
         'django.request': {
-            'handlers': ['mail_admins'],
+            'handlers': ['console', 'mail_admins'],
             'level': 'ERROR',
             'propagate': True,
         },
